@@ -1,0 +1,2 @@
+No meu projeto da pasta /studyrats possui meu backend, com hateoas, se trata de um projeto para cadastro de grupo de estudos onde as pessoas entram em grupo e fazem checkin, assim elas competem entre si par saber o ranking.
+Preciso criar uma aplicacao com next.js com SSR, com tela de login, cadastro, checkin, listagem de grupos participantes, listagem de checking, ranking consumindo os endpoints do backend 
