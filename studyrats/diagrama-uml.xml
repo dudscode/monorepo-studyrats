@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="StudyRats-MVP-UML">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="User" value="User&#xa;------&#xa;id: UUID&#xa;name: String&#xa;email: String&#xa;passwordHash: String&#xa;role: String&#xa;createdAt: DateTime"
+          style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="220" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Group" value="StudyGroup&#xa;-----------&#xa;id: UUID&#xa;name: String&#xa;inviteCode: String&#xa;createdAt: DateTime"
+          style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="60" width="220" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Membership" value="GroupMembership&#xa;----------------&#xa;id: UUID&#xa;userId: UUID&#xa;groupId: UUID&#xa;joinedAt: DateTime"
+          style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="240" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Checkin" value="Checkin&#xa;--------&#xa;id: UUID&#xa;userId: UUID&#xa;groupId: UUID&#xa;date: Date&#xa;studyMinutes: int&#xa;description: String&#xa;learnedSummary: String&#xa;imageUrl: String&#xa;createdAt: DateTime"
+          style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="260" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Relations -->
+
+        <mxCell id="e1" value="1 .. *"
+          style="endArrow=block;html=1;" edge="1" parent="1"
+          source="User" target="Membership">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="1 .. *"
+          style="endArrow=block;html=1;" edge="1" parent="1"
+          source="Group" target="Membership">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="1 .. *"
+          style="endArrow=block;html=1;" edge="1" parent="1"
+          source="User" target="Checkin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" value="1 .. *"
+          style="endArrow=block;html=1;" edge="1" parent="1"
+          source="Group" target="Checkin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
