@@ -1,0 +1,11 @@
+title = "StudyRats Frontend Gitleaks Config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "env-local"
+description = "Prevent .env.local from being committed"
+regex = '''\.env\.local'''
+path = '''\.env\.local$'''
+tags = ["secret", "env"]
