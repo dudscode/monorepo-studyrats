@@ -184,8 +184,8 @@
 - [X] T078 [P] Configure Lighthouse CI — add `lighthouserc.js` to `studyrats-frontend/`; set thresholds: LCP ≤ 2500ms, INP ≤ 200ms, CLS ≤ 0.1; document as required CI step in README
 - [X] T079 [P] Add `npm audit` step documentation — add `npm run audit:ci` script to `package.json` (`npm audit --audit-level=high`); document in CI workflow
 - [X] T080 Run final coverage gate: `npm run test:coverage` inside `studyrats-frontend/` — all lines/branches/functions must be 100%; resolve any gaps
-- [ ] T081 Run full E2E suite: `npm run test:e2e` inside `studyrats-frontend/` against running backend — all auth, check-in, and ranking specs pass (requires live backend)
-- [ ] T082 Rename git branch to follow constitution: `git branch -m feat/001-nextjs-frontend-studyrats` (resolves Principle II violation documented in plan.md Constitution Check)
+- [x] T081 Run full E2E suite: `npm run test:e2e` inside `studyrats-frontend/` against running backend — all auth, check-in, and ranking specs pass (requires live backend)
+- [x] T082 Rename git branch to follow constitution: `git branch -m feat/001-nextjs-frontend-studyrats` (resolves Principle II violation documented in plan.md Constitution Check)
 
 **Checkpoint**: `docker-compose up --build` starts all three services; Lighthouse CI green on all thresholds; 100% unit test coverage; all E2E tests pass; branch name matches constitution pattern
 
