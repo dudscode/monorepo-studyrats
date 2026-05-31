@@ -32,6 +32,22 @@ services:
     networks:
       - studyrats-network
 
+  frontend:
+    build:
+      context: ../studyrats-frontend
+      args:
+        NEXT_PUBLIC_API_BASE_URL: http://localhost:9090
+    container_name: studyrats-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      API_BASE_URL: http://studyrats-app:9090
+      NODE_ENV: production
+    depends_on:
+      - app
+    networks:
+      - studyrats-network
+
 volumes:
 #  Mantém o dados do mysql mesmo que o container seja excluid
   mysql_data:
